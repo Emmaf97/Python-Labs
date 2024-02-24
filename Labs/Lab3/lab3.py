@@ -6,3 +6,17 @@ else:
     print("You are not able to vote")
     
 #2. Grading System
+
+#3. Even or Odd
+
+#4. Leap Year
+
+#5. Largest Number
+
+#Challenges
+
+#1. 
+
+#2. 
+
+#3. 
