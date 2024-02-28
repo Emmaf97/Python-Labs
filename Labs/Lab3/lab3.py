@@ -72,7 +72,7 @@ import sys
 # complete the program based on the following rates.
 
 # Prompt the user to enter filing status
-status = int(input("Enter the filing status: "))
+status = input("Enter the filing status: ")
 
 # Prompt the user to enter taxable income
 income = float(input("Enter the taxable income: "))
