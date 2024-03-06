@@ -54,22 +54,42 @@ reversed_sentence = sentence[::-1]
 #2.g Print the reversed sentence.
 print(reversed_sentence)
 
-#Challenges 
 
-#1. (Turtle: paint a smiley face) Write a program that paints a smiley face.
-
-#2. (Turtle: draw shapes) Write a program that draws a triangle, square, pentagon,
-# hexagon, and octagon, as shown below. Note that the bottom edges of these shapes
-# are parallel to the x-axis. (Hint: For a triangle with a bottom line parallel to the x-axis,
-# set the turtle’s heading to 60 degrees.)
-
-#3. (Financial application: payroll) Write a program that reads the following information
-#and prints a payroll statement:
+# (Financial application: payroll) Write a program that reads the following information
+# and prints a payroll statement:
 # Employee’s name (e.g., Smith)
 # Number of hours worked in a week (e.g., 10)
 # Hourly pay rate (e.g., 9.75)
 # Federal tax withholding rate (e.g., 20%)
 # State tax withholding rate (e.g., 9%)
+
+def calculatePayroll(name,hours,payrate,fedtax,statetax):
+    gross = hours * payrate
+    fedValue =  gross * fedtax
+    stateValue = gross * statetax
+    totalDeductions = fedValue + stateValue
+    netPay = gross - totalDeductions
+    print("-----------------")
+    print("-----------------")
+    print(f"Employee Name: {name}")
+    print(f"Hours Worked: {hours}")
+    print(f"Hours Worked: {payrate}")
+    print(f"Gross Pay: {gross}")
+    print("-----------------")
+    print("Deductions")
+    print("-----------------")
+    print(f"  Federal tax withholding rate: ({fedtax * 100}%) : ${fedValue}")
+    print(f"  Federal tax withholding rate: ({statetax * 100}%) : ${stateValue}")
+    print(f"  Total Deduction:   ${totalDeductions}")
+    print(f"Net Pay: {netPay}")
+    
+name = input("Enter Employee Name: ")
+hours = int(input("Enter hours worked: "))
+payrate = int(input("Enter hourly payrate: "))
+fedtax = float(input("Enter Federal tax withholding rate: "))
+statetax = float(input("State tax withholding rate: "))
+
+calculatePayroll(name, hours, payrate, fedtax, statetax)
 
 # inclass notes on slicing
 my_list = ("apple", "Orange", "Strawberries","Kiwi")
