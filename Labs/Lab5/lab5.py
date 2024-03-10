@@ -62,3 +62,70 @@ def primeCalc():
            primNumbers.append(t)
     print(primNumbers)
 primeCalc()
+
+
+# 1. (Count positive and negative numbers and compute the average of numbers) Write a
+# program that reads an unspecified number of integers, determines how many
+# positive and negative values have been read, and computes the total and average of
+# the input values (not counting zeros). Your program ends with the input 0. Display
+# the average as a floating-point number.
+def numberCheck():
+    countpos = 0
+    countneg = 0
+    totalInputs = 0
+    total = 0
+    
+    while True:
+        user_input = input("Enter a number or type 'done' to finish: ")
+        
+        if user_input.lower() == "done":
+            break
+        
+        number  = int(user_input)
+        total += number
+        totalInputs += 1
+        
+
+        if number > 0:
+             countpos +=1
+        if number < 0:
+            countneg +=1
+        
+    
+        average = total / totalInputs
+    
+    if totalInputs > 0:
+        print(f"The number of positive numbers is: {countpos}")
+        print(f"The number of negative numbers is: {countneg}")
+        print(f"Total is equal to: {total}")
+        print(f"The average is: {average}")
+    else:
+        ("No Numbers Entered")
+        
+    
+numberCheck()
+
+
+# 2. (Conversion from kilograms to pounds and pounds to kilograms) Write a program
+# that displays the following two tables side by side (note that 1 kilogram is 2.2 pounds
+# and that 1 pound is .45 kilograms): Your solution should have 199 rows.
+def convertkg():
+    pounds = 20
+    One_pound = 2.2
+    One_KG = 0.45
+    print("---------------------------------------------")
+    print("Kilograms    Pounds      ||       Pounds       Kilograms")
+    for i in range(1, 200):
+        new_pound = One_KG * pounds
+        #print("Kilograms          Pounds                ||        Pounds         Kilograms")
+        print(f"{i:<13} {f'{One_pound:.1f}':<10} {f'||':<10} {pounds:<12} {new_pound:.2f}")
+        i += 1
+        pounds += 5
+        One_pound += 2.2
+        
+    print("---------------------------------------------")
+convertkg()
+
+
+#(Display a pyramid) Write a program that prompts the user to enter an integer from
+# 1 to 15 and displays a pyramid.
