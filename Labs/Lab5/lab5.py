@@ -132,20 +132,10 @@ convertkg()
 
 def drawPyramid():
     user_input = int(input("Enter the number of lines 1-15: "))
-    pyramidright = []
-    pyramidleft = []
-    fullPyramid = []
-    for i in range(1,user_input + 1):
-        
-        pyramidright.append(str(i))
-        for j in range(1,user_input-1):
-            pyramidleft.append(str(j))
-        
-        fullPyramid.append(" ".join(pyramidleft + pyramidright))
-        pyramidleft.reverse()
-        
-    for line in fullPyramid:
-        print(line)
-      
-        
+    
+    for i in range(1, user_input + 1):
+        spaces = "  " * (user_input - i)  # Add spaces before the sequence
+        pyramid_sequence = " ".join(str(j) for j in range(i, 0, -1)) + " " + " ".join(str(j) for j in range(2, i + 1))
+        print(spaces + pyramid_sequence)
+
 drawPyramid()
