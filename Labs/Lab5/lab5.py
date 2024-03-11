@@ -129,3 +129,23 @@ convertkg()
 
 #(Display a pyramid) Write a program that prompts the user to enter an integer from
 # 1 to 15 and displays a pyramid.
+
+def drawPyramid():
+    user_input = int(input("Enter the number of lines 1-15: "))
+    pyramidright = []
+    pyramidleft = []
+    fullPyramid = []
+    for i in range(1,user_input + 1):
+        
+        pyramidright.append(str(i))
+        for j in range(1,user_input-1):
+            pyramidleft.append(str(j))
+        
+        fullPyramid.append(" ".join(pyramidleft + pyramidright))
+        pyramidleft.reverse()
+        
+    for line in fullPyramid:
+        print(line)
+      
+        
+drawPyramid()
