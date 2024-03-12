@@ -3,10 +3,18 @@
 # function should take a temperature in Celsius as an argument and return the
 # equivalent temperature in Fahrenheit.
 
+def tempConvert():
+    user_input = int(input("Enter a temperature in celsius: "))
+    fahrenheit = (user_input * 9/5) + 32
+    
+    print(f"{user_input} degrees Celsius is {fahrenheit} degrees Fahrenheit")
+
+tempConvert()
 
 #2. Maximum of Three Numbers
 # Write a Python function that takes three numbers as arguments and returns the
 # maximum of the three numbers.
+
 
 #3. Palindrome Check
 # Write a Python function that checks whether a given string is a palindrome or not.
