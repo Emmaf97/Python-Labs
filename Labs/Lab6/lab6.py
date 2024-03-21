@@ -20,7 +20,17 @@ tempConvert()
 # Write a Python function that checks whether a given string is a palindrome or not.
 # The function should take a string as an argument and return True if it is a
 # palindrome, and False otherwise.
+def palindrome_Check():
+    string1 = input("Enter String1: ")
+    reversed_string = string1[::-1]
+    
+    if reversed_string == string1:
+        print(f"{string1} is a palindrome")
+    else:
+        print(f"{string1} this is not a palindrome")
+    
 
+palindrome_Check()
 
 #4. Factorial Calculation
 # Write a Python function that calculates the factorial of a given number. The function
