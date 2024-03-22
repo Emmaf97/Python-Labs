@@ -14,6 +14,23 @@ tempConvert()
 #2. Maximum of Three Numbers
 # Write a Python function that takes three numbers as arguments and returns the
 # maximum of the three numbers.
+def max_Numbers():
+    number1 = int(input("Enter Number 1: "))
+    number2 = int(input("Enter Number 2: "))
+    number3 = int(input("Enter Number 3: "))
+    max_num = 0
+    
+    if number1 > number2 and number1 > number3:
+        max_num = number1
+    elif number2 > number3 and number2 > number1:
+        max_num = number2
+    else:
+        max_num = number3
+        
+    print(max_num)
+
+max_Numbers()
+        
 
 
 #3. Palindrome Check
@@ -36,7 +53,31 @@ palindrome_Check()
 # Write a Python function that calculates the factorial of a given number. The function
 # should take an integer as an argument and return its factorial.
 
+def factorial():
+    number = int(input("Enter a number here to check factorial: "))
+    result = 1
+    
+    while number > 0:
+        result *= number
+        number -=1
+        
+        
+    print(result)
+        
+factorial()
 #5. Sum of Squares
 # Write a Python function that calculates the sum of squares of numbers from 1 to a
 # given number. The function should take a positive integer as an argument and return
 # the sum of squares.
+
+# sum of squares from 1 to number 
+# function takes positive int and returns sum of squares
+
+def SumOfSquares():
+    user_input = int(input("Enter a number here to get the sum of squares: "))
+    result = []
+    for i in range(user_input+1):
+        result.append( i ** 2)
+    print(sum(result))
+    
+SumOfSquares()
