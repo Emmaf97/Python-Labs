@@ -2,12 +2,28 @@
 # Write a function named "sum_of_even_numbers" that takes a list of numbers as input.
 # The function should calculate and return the sum of all even numbers in the list.
 # Test the function using a sample list of numbers and print the result.
+def SumEven():
+    original_list = [1,2,3,4,5,6]
+    number = 0
+    for x in original_list:
+        if x % 2 == 0:
+            number += x**2
+    x+=1
+    print(number)
+        
 
+SumEven()
 
 # 2. Reverse a List
 # Write a function named "reverse_list" that takes a list as input.
 # The function should reverse the order of elements in the list and return the reversed list.
 # Test the function using a sample list and print the reversed list.
+def reverseList():
+    sample_list = ["Apple","Banana","Pear","Mango"]
+    reverse_list = sample_list[::-1]
+    print(reverse_list)
+
+reverseList()
 
 
 # 3. List Comprehension
